@@ -5,8 +5,9 @@ import Footer from '../components/Footer'
 import Ignore from '../components/aside/Ignore'
 import Login from '../components/aside/Login'
 import Range from '../components/aside/Range'
-import Author from '../components/aside/Author'
 import Connect from '../components/aside/Connect'
+import Download from '../components/aside/Download'
+import ScrollTop from '../components/ScrollTop'
 import '../components/aside/index.css'
 
 export default class Index extends Component {
@@ -22,12 +23,13 @@ export default class Index extends Component {
                             <Login />
                             <Ignore />
                             <Range />
-                            <Author />
                             <Connect />
+                            <Download />
                         </aside>
                     </section>
                 </article>
                 <Footer />
+                <ScrollTop/>
             </>
         )
     }

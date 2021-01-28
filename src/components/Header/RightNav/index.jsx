@@ -3,31 +3,19 @@ import { NavLink } from 'react-router-dom'
 import './index.css'
 
 export default class RightNav extends Component {
-  data = [{name:"",to:""},
+  data = [
+    {page:"首页",to:'/index'},
+    {page:"新手入门",to:'/new'},
+    {page:"API",to:'/api'},
+    {page:"关于",to:'/about'},
+    {page:"注册",to:'/regist'},
+    {page:"登录",to:'/login'},
 ]
   render() {
     return (
       <div className="nav-leftContent">
         <ul>
-          <li>
-            <NavLink to='/index'>首页</NavLink>
-          </li>
-          <li>
-            <NavLink to='/new'>新手入门</NavLink>
-          </li>
-          <li>
-            <NavLink to='/api'>API</NavLink>
-          </li>
-
-          <li>
-            <NavLink to='/about'>关于</NavLink>
-          </li>
-          <li>
-            <NavLink to='/regist'>注册</NavLink>
-          </li>
-          <li>
-            <NavLink to='/login'>登录</NavLink>
-          </li>
+        {this.data.map((item,index)=><li key={index}><NavLink to={item.to}>{item.page}</NavLink></li>)}
         </ul>
       </div>
     )
