@@ -13,12 +13,12 @@ class AppStore {
         {
         //get参数传递
           params:{
-          tab:this.tab,
-          page:this.page,
-      }
-    }
+            tab:this.tab,
+            page:this.page,
+          }
+        }
         ).then(response => {  
-                this.list = response.data   
+          this.list = response.data   
         })
     }
     @action getArticleDetile(url){

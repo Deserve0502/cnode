@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import PropTypes from 'prop-types'
-import store from '../store'
+import './index.css'
+import store from '../../store'
 import {
     observer
 } from 'mobx-react';
@@ -12,6 +13,7 @@ export default class IndexInvi extends Component {
     componentDidMount(){
       store.getIndexMessage('/topics')
     }
+    
     changeTab = (type) =>{
       switch(type){
         case 'all':
@@ -22,12 +24,13 @@ export default class IndexInvi extends Component {
            break;
       }
       store.getIndexMessage('/topics')
-
     }
+
     goPage = (page) =>{
       store.page = page;
       store.getIndexMessage('/topics')
     }
+
     goDetile = (id)=>{
       this.props.history.history.push({pathname:'/detile'})
       let url = '/topic/' + id;
@@ -37,7 +40,7 @@ export default class IndexInvi extends Component {
     render() {
        
         return (
-            <>
+            <div id="main">
             
             <div onClick={()=>this.goPage(3)}>3</div>
             <div onClick={()=>this.goPage(1)}>1</div>
@@ -61,14 +64,10 @@ export default class IndexInvi extends Component {
                 <div className="main-text">
                 
                   {
-                    
                     store.list.map((ele, index) => {
                       return (
                         <div key={index} onClick={()=>this.goDetile(ele.id)}>{ele.title}</div>       
                                                 )
-
-                      
-
                     }
                     )
                 
@@ -91,7 +90,7 @@ export default class IndexInvi extends Component {
 
           </div>
         </div>
-            </>
+            </div>
 )
 }
 }

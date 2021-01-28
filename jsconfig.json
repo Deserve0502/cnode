@@ -1,4 +1,3 @@
-//开启装饰器
 {
     "compilerOptions": {
         "experimentalDecorators": true
