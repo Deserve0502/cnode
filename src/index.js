@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Routers from './router';
+<<<<<<< HEAD
 import '../src/style/reset.css'
 import '../src/style/index.css'
+=======
+import './style/reset.css'
+>>>>>>> 8427892 (feenan)
 import '../src/style/font/iconfont.css'
 ReactDOM.render(
 <Routers />

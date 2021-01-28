@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -13,4 +14,21 @@ ul {
 }
 a{
 	text-decoration: none;
+=======
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body,*{
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+a{
+	text-decoration: none;
+>>>>>>> 8427892 (feenan)
 }
